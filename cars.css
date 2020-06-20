@@ -1,0 +1,17 @@
+#photoBox {
+    width: 449px;
+    height: 449px;
+    margin: auto;
+    font-size: 0;
+    border: 1px solid black;
+}
+#photoBox p{
+    display: inline-block;
+    margin-bottom: 0px !important;
+    width: 149px;
+    border: 1px solid black;
+}
+#photoBox img{
+    width: 100%;
+    height: 147px;
+}
