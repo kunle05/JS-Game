@@ -1,5 +1,5 @@
 #photoBox {
-    width: 447px;
+    width: 445px;
     height: 449px;
     margin: auto;
     font-size: 0;
@@ -18,9 +18,9 @@
 @media(max-width: 420px){
     #photoBox {
         width: 359px;
-        height: 360px;
+        height: 359px;
     }
     #photoBox img{
-        height: 120px;
+        height: 117px;
     }
 }
