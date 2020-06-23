@@ -7,6 +7,7 @@ $(function(){
     startGame();
 
     $('p').click(function(){
+        $(this).css('pointer-events', 'none')
         x -= 1;
         let btnClicked = $('img', this)
         $(btnClicked).removeClass("invisible");
@@ -74,11 +75,15 @@ $(function(){
     
         for(var i=0; i<pos.length; i++){
             if(i != 1){
-                if(pos[i] == pos[1]){
+                while(pos[i] == pos[1]){
+                    pos[i] = Math.floor(Math.random() * 16 /2)
+                }
+                if(i == 2 && pos[i] == pos[0]){
                     pos[i] = Math.floor(Math.random() * 16 /2)
                 }
             }
         }
+        console.log(pos);
     
         $('#photoBox img').each(function(ind){
             if(ind == pos[0] || ind == pos[2]){
@@ -106,6 +111,7 @@ $(function(){
         $('#photoBox img').attr('name', '').attr('src', 'images/');
         $('#photoBox h1').addClass('d-none').removeClass('text-danger text-success');
         $('#photoBox button').addClass('d-none');
+        $('#photoBox p').css('pointer-events', 'auto');
         startGame();
     }
 })
